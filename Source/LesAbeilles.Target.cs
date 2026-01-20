@@ -1,0 +1,20 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+using UnrealBuildTool;
+using System.Collections.Generic;
+
+public class LesAbeillesTarget : TargetRules
+{
+	public LesAbeillesTarget(TargetInfo Target) : base(Target)
+	{
+		Type = TargetType.Game;
+		DefaultBuildSettings = BuildSettingsVersion.V5;
+
+		ExtraModuleNames.AddRange( new string[] { "LesAbeilles" } );
+
+        if (Target.Platform == UnrealTargetPlatform.Android)
+        {
+            AdditionalLinkerArguments += " -lc++_shared -lc++abi";
+        }
+    }
+}

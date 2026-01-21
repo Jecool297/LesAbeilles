@@ -12,9 +12,6 @@ public class LesAbeillesTarget : TargetRules
 
 		ExtraModuleNames.AddRange( new string[] { "LesAbeilles" } );
 
-        if (Target.Platform == UnrealTargetPlatform.Android)
-        {
-            AdditionalLinkerArguments += " -lc++_shared -lc++abi";
-        }
+     
     }
 }

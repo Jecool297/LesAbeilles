@@ -20,10 +20,6 @@ public class LesAbeilles : ModuleRules
 
         // To include OnlineSubsystemSteam, add it to the plugins section in your uproject file with the Enabled attribute set to true
 
-        if (Target.Platform == UnrealTargetPlatform.Android)
-        {
-            PublicSystemLibraries.Add("c++_shared");
-            PublicSystemLibraries.Add("c++abi");
-        }
+        
     }
 }
